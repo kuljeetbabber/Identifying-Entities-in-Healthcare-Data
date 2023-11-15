@@ -33,33 +33,46 @@ The dataset consists of four files:
 6. **Dictionary Creation:**
     - Build a dictionary mapping diseases to their probable treatments.
 
-## Methodology
+### Methodology
 
-To solve this assignment, I followed the following methodology:
+To accomplish the tasks, the following methodology was followed:
 
-- **Data Processing:**
-    - Utilized Python and pandas to combine words in the 'train_sent' and 'test_sent' datasets, forming coherent sentences.
-    - Implemented logic to identify and manage blank lines to create well-structured sentences.
+- **Data Preprocessing:**
+  - Utilized Python and pandas for constructing sentences and handling blank lines.
+  - Checked the correctness of sentences and label counts.
 
-- **Feature Definition:**
-    - Studied the dataset and identified key features necessary for training the CRF model.
-    - Considered linguistic patterns, word context, and label information to define relevant features.
+- **Concept Identification:**
+  - Implemented PoS tagging using spaCy to identify nouns and proper nouns.
+  - Created a dictionary of concept counts and outputted the top 25.
 
-- **CRF Model Building:**
-    - Used the scikit-learn library to build a Conditional Random Fields (CRF) model.
-    - Defined the target variable based on labeled data and applied features to train the model.
+- **Defining Features for CRF:**
+  - Defined features considering PoS tags and preceding words.
 
-- **Model Evaluation:**
-    - Employed the test dataset to evaluate the performance of the built CRF model.
-    - Assessed metrics such as precision, recall, and F1-score to measure the effectiveness of the model.
+- **Getting Features and Labels of Sentences:**
+  - Coded functions to extract features and labels for sentences.
 
-## Findings
+- **Defining Input and Target Variables:**
+  - Extracted features and labels for both test and train datasets.
 
-Upon completing the assignment, several findings emerged:
+- **Building the Model:**
+  - Utilized scikit-learn to build a CRF model.
 
-- The CRF model demonstrated on the test dataset, indicating its ability to accurately identify diseases and treatments.
-- The dictionary created successfully mapped diseases to their probable treatments, providing a structured output.
+- **Evaluation:**
+  - Predicted labels for test dataset tokens and calculated F1 score.
 
+- **Identifying Diseases and Treatment using Custom NER:**
+  - Created logic to map diseases to their probable treatments.
+
+### Findings
+
+Upon completing the tasks, the following findings were observed:
+
+- Successful construction of sentences from token format.
+- Identification of top concepts using PoS tagging.
+- Effective definition and application of features for CRF.
+- Successful extraction of features and labels for model building.
+- CRF model demonstrated on the test dataset.
+- Creation of a logic to map diseases to their probable treatments.
 
 ## Contributor
 - [Kuljeet Babber](https://github.com/kuljeetbabber)
